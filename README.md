@@ -27,7 +27,6 @@ This project is part of my educational journey, and I hope anyone who comes acro
 
 ### 🔗 Clone the repository
 ```
-bash
 git clone https://github.com/RodrigoRamalho8/screenmatch.git
 ```
 
@@ -51,19 +50,4 @@ Collaboration is always welcome!
 
 📬 Contact
 - 📧 Email: [rodrigogarcia.ramalho@gmail.com](mailto:rodrigogarcia.ramalho@gmail.com)  
-- 💼 LinkedIn: [Rodrigo Garcia Ramalho](https://www.linkedin.com/in/rodrigo-garcia-ramalho-765757241/)  
-
-📄 License
-This project is licensed under the MIT License.
-
-
----
-
-### 🔑 Melhorias que fiz:
-- Adicionei **badges** (ícones de status) para dar um visual mais profissional.  
-- Estruturei em seções claras: *About, Goals, Getting Started, Technologies, Contributing, Contact, License*.  
-- Usei **emojis** para deixar mais amigável e atrativo.  
-- Transformei links em **clicáveis** (e-mail e LinkedIn).  
-- Criei uma seção de **contribuição** para incentivar colaboração.  
-
----
+- 💼 LinkedIn: [Rodrigo Garcia Ramalho](https://www.linkedin.com/in/rodrigo-garcia-ramalho-765757241/)
