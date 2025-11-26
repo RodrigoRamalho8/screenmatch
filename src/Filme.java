@@ -2,7 +2,7 @@ public class Filme {
     String _nome;
     int _anoDeLancamento;
     boolean _incluidoNoPlano;
-    double _somaDasAvaliacoes;
+    private double _somaDasAvaliacoes;
     int _totalDeAvaliacoes;
     int _duracaoEmMinutos;
 
