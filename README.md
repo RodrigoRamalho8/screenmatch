@@ -30,13 +30,17 @@ This project is part of my educational journey, and I hope anyone who comes acro
 git clone https://github.com/RodrigoRamalho8/screenmatch.git
 ```
 
-⚙️ Requirements
+---
+
+## ⚙️ Requirements
 - Java 25.0.1 LTS
 - IntelliJ IDEA (recommended)
 - MySQL
 - Angular CLI
 
-🛠️ Technologies Used
+---
+
+## 🛠️ Technologies Used
 - Java 25.0.1 LTS
 - Spring Boot
 - Angular Framework
@@ -44,10 +48,14 @@ git clone https://github.com/RodrigoRamalho8/screenmatch.git
 - IntelliJ IDEA
 - Git/GitHub
 
-🤝 Contributing
+---
+
+## 🤝 Contributing
 Feel free to contribute, suggest improvements, or report issues.
 Collaboration is always welcome!
 
-📬 Contact
+---
+
+## 📬 Contact
 - 📧 Email: [rodrigogarcia.ramalho@gmail.com](mailto:rodrigogarcia.ramalho@gmail.com)  
 - 💼 LinkedIn: [Rodrigo Garcia Ramalho](https://www.linkedin.com/in/rodrigo-garcia-ramalho-765757241/)
