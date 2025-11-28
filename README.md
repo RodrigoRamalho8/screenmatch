@@ -8,8 +8,8 @@
 ---
 
 ## 📖 About the Project
-**Screenmatch** is a project developed during my Java course at **Alura**.  
-The purpose of this project is to introduce myself to the Java language and explore more complex applications.
+**Screenmatch** is a project inspired during my Java course at **Alura**.  
+The purpose of this project is to any user that wants to, can rate an movie os serie and also introduce myself to the Java language and explore more complex applications.
 
 ---
 
