@@ -1,12 +1,12 @@
 package backend.modelos.conteudos;
 
 public class Titulo {
-    private String nome;
-    private int anoDeLancamento;
-    private boolean incluidoNoPlano;
-    private double somaDasAvaliacoes;
-    private int totalDeAvaliacoes;
-    private int duracaoEmMinutos;
+    private String Nome;
+    private int AnoDeLancamento;
+    private boolean IncluidoNoPlano;
+    private double SomaDasAvaliacoes;
+    private int TotalDeAvaliacoes;
+    private int DuracaoEmMinutos;
 
     public Titulo() {
     }
@@ -14,39 +14,39 @@ public class Titulo {
     // <editor-fold desc="Getters & Setters">
 
     public String getNome() {
-        return nome;
+        return Nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.Nome = nome;
     }
 
     public int getAnoDeLancamento() {
-        return anoDeLancamento;
+        return AnoDeLancamento;
     }
 
     public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
+        this.AnoDeLancamento = anoDeLancamento;
     }
 
     public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
+        return IncluidoNoPlano;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
-        this.incluidoNoPlano = incluidoNoPlano;
+        this.IncluidoNoPlano = incluidoNoPlano;
     }
 
     public int getTotalDeAvaliacoes() {
-        return totalDeAvaliacoes;
+        return TotalDeAvaliacoes;
     }
 
     public int getDuracaoEmMinutos() {
-        return duracaoEmMinutos;
+        return DuracaoEmMinutos;
     }
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
+        this.DuracaoEmMinutos = duracaoEmMinutos;
     }
 
 
@@ -54,19 +54,19 @@ public class Titulo {
 
     // <editor-fold desc="Métodos">
     public void ExibeFichaTecnica() {
-        System.out.println("Nome do título: " +nome);
-        System.out.println("Ano de lançamento: " +anoDeLancamento);
-        System.out.println("Duração em minutos: " +duracaoEmMinutos);
-        System.out.println("Incluído no plano: " +incluidoNoPlano);
+        System.out.println("Nome do título: " + Nome);
+        System.out.println("Ano de lançamento: " + AnoDeLancamento);
+        System.out.println("Duração em minutos: " + DuracaoEmMinutos);
+        System.out.println("Incluído no plano: " + IncluidoNoPlano);
     }
 
     public void Avalia(double nota){
-        this.somaDasAvaliacoes += nota;
-        this.totalDeAvaliacoes++;
+        this.SomaDasAvaliacoes += nota;
+        this.TotalDeAvaliacoes++;
     }
 
     public double getMedia(){
-        return this.somaDasAvaliacoes / this.totalDeAvaliacoes;
+        return this.SomaDasAvaliacoes / this.TotalDeAvaliacoes;
     }
     // </editor-fold>
 }
