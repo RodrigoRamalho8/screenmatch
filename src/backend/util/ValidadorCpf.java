@@ -1,6 +1,4 @@
-package screenmatch.backend.util;
-
-import java.util.regex.Pattern;
+package backend.util;
 
 public class ValidadorCpf {
     public boolean EhValido(String cpf) throws Exception {

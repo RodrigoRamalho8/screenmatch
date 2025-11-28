@@ -1,4 +1,4 @@
-package screenmatch.backend.database;
+package backend.database;
 
 public class Database {
     private String host;

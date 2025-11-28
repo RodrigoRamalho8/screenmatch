@@ -1,6 +1,6 @@
-package screenmatch.backend.modelos.usuarios;
+package backend.modelos.usuarios;
 
-import screenmatch.backend.util.ValidadorCpf;
+import backend.util.ValidadorCpf;
 
 import java.util.Date;
 

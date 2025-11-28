@@ -1,4 +1,4 @@
-package screenmatch.backend.modelos.conteudos;
+package backend.modelos.conteudos;
 
 public class Titulo {
     private String nome;
