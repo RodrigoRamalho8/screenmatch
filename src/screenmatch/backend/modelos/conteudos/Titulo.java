@@ -1,4 +1,4 @@
-package screenmatch.modelos;
+package screenmatch.backend.modelos.conteudos;
 
 public class Titulo {
     private String nome;
@@ -8,12 +8,8 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-//    public Titulo(String nome, int anoDeLancamento, boolean incluidoNoPlano,  int duracaoEmMinutos){
-//        this.nome = nome;
-//        this.anoDeLancamento = anoDeLancamento;
-//        this.incluidoNoPlano = incluidoNoPlano;
-//        this.duracaoEmMinutos = duracaoEmMinutos;
-//    }
+    public Titulo() {
+    }
 
     // <editor-fold desc="Getters & Setters">
 
@@ -69,7 +65,7 @@ public class Titulo {
         this.totalDeAvaliacoes++;
     }
 
-    public double ObtemMedia(){
+    public double getMedia(){
         return this.somaDasAvaliacoes / this.totalDeAvaliacoes;
     }
     // </editor-fold>

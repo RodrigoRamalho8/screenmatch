@@ -1,5 +1,5 @@
-package screenmatch.calculos;
-import screenmatch.modelos.Titulo;
+package screenmatch.backend.calculos;
+import screenmatch.backend.modelos.conteudos.Titulo;
 
 public class CalculadoraDeTempo {
 

@@ -1,10 +1,13 @@
-package screenmatch.modelos;
+package screenmatch.backend.modelos.conteudos;
 
 public class Serie extends Titulo{
     private int temporadas;
     private int episodiosPorTemporada;
     private boolean ativa;
     private int minutosPorEpisodio;
+
+    public Serie() {
+    }
 
     // <editor-fold desc="Getters & Setters">
     public int getTemporadas() {

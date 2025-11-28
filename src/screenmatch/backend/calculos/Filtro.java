@@ -1,6 +1,6 @@
-package screenmatch.calculos;
+package screenmatch.backend.calculos;
 
-public class FiltroRecomendacao {
+public class Filtro {
     private String recomendacao;
 
     public void Filtra(Classificavel classificavel){

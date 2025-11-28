@@ -1,8 +1,11 @@
-package screenmatch.modelos;
-import screenmatch.calculos.Classificavel;
+package screenmatch.backend.modelos.conteudos;
+import screenmatch.backend.calculos.Classificavel;
 
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
+
+    public Filme() {
+    }
 
     // <editor-fold desc="Getters & Setters>"
     public String getDiretor() {
@@ -16,6 +19,6 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public int getClassificacao() {
-        return (int) ObtemMedia() / 2;
+        return (int) getMedia() / 2;
     }
 }

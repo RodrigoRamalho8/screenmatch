@@ -1,12 +1,15 @@
-package screenmatch.modelos;
+package screenmatch.backend.modelos.conteudos;
 
-import screenmatch.calculos.Classificavel;
+import screenmatch.backend.calculos.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
     private String nome;
     private Serie serie;
     private int totalVisualizacoes;
+
+    public Episodio() {
+    }
 
     // <editor-fold desc="Getters & Setters">
 
