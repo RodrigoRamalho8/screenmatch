@@ -1,17 +1,13 @@
 package backend.util;
 
 public class ValidadorCpf {
-    public boolean EhValido(String cpf) throws Exception {
-        try {
-            if(cpf.length() != 11 ) return false;
-            if (cpf.matches(".*[a-zA-Z].*")) return false;
-            String cpfFormatado = this.FormataCpf(cpf);
-            if (cpfFormatado.matches("(\\d)\\1{10}")) return false;
-            if(Character.getNumericValue((int)cpf.toCharArray()[9]) != this.CalculaPrimeiroDigito(cpfFormatado)) return false;
-            return Character.getNumericValue((int)cpf.toCharArray()[10]) == this.CalculaSegundoDigito(cpfFormatado);
-        }catch (Exception except) {
-            throw new Exception("CPF inválido");
-        }
+    public boolean EhValido(String cpf){
+        if(cpf.length() != 11 ) return false;
+        String cpfFormatado = this.FormataCpf(cpf);
+        if (cpf.matches(".*[a-zA-Z].*")) return false;
+        if (cpfFormatado.matches("(\\d)\\1{10}")) return false;
+        return Character.getNumericValue((int)cpf.charAt(9)) == this.CalculaPrimeiroDigito(cpfFormatado) &&
+                Character.getNumericValue((int)cpf.charAt(10)) == this.CalculaSegundoDigito(cpfFormatado);
     }
 
     public String FormataCpf(String cpf){
@@ -20,7 +16,7 @@ public class ValidadorCpf {
 
     public int CalculaPrimeiroDigito(String cpf){
         int n = 0;
-        for(int i = 0; i <= (cpf.length() - 2); i++){
+        for(int i = 0; i <9; i++){
             n += (Character.getNumericValue(cpf.charAt(i)) * (10 - i));
         }
         int resto = n % 11;
@@ -29,10 +25,10 @@ public class ValidadorCpf {
 
     public int CalculaSegundoDigito(String cpf){
         int n = 0;
-        for(int i = 0; i <= (cpf.length() - 1); i++){
+        for(int i = 0; i < 10; i++){
             n += (Character.getNumericValue(cpf.charAt(i)) * (cpf.length() - i));
         }
         int resto = n % 11;
-        return (resto  > 2) ? 0 : 11 - resto;
+        return (resto  < 2) ? 0 : 11 - resto;
     }
 }

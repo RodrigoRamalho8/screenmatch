@@ -1,7 +1,9 @@
 package backend.modelos.usuarios;
 
 import backend.util.ValidadorCpf;
+import backend.util.ValidadorEmail;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Pessoa {
@@ -9,8 +11,8 @@ public class Pessoa {
     private String Nome;
     private String Apelido = null;
     private String Email;
-    private Date DtNascimento;
-    private Date DtCadastro;
+    private LocalDate DtNascimento;
+    private LocalDate DtCadastro;
     private int TipoUsuario = 2;
 
     public Pessoa(){
@@ -22,16 +24,30 @@ public class Pessoa {
         return Cpf;
     }
 
-    public void setCpf(String cpf) {
-        Cpf = cpf;
+    public void setCpf(String cpf) throws Exception{
+        if(!new ValidadorCpf().EhValido(cpf)) {
+            throw new Exception("CPF inválido!");
+        }
+        this.Cpf = cpf;
     }
+
 
     public String getNome() {
         return Nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        try{
+            if(nome.matches("^[a-zA-Z]+$")){
+                Nome = nome;
+            }
+            else{
+                throw new Exception("Nome inválido");
+            }
+        }catch(Exception except){
+            System.err.println(except.getMessage());
+        }
+
     }
 
     public String getApelido() {
@@ -46,23 +62,26 @@ public class Pessoa {
         return Email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String email) throws Exception{
+        if(!new ValidadorEmail().EhValido(email)){
+            throw new Exception("Email inválido!");
+        }
         Email = email;
     }
 
-    public Date getDtNascimento() {
+    public LocalDate getDtNascimento() {
         return DtNascimento;
     }
 
-    public void setDtNascimento(Date dtNascimento) {
+    public void setDtNascimento(LocalDate dtNascimento) {
         DtNascimento = dtNascimento;
     }
 
-    public Date getDtCadastro() {
+    public LocalDate getDtCadastro() {
         return DtCadastro;
     }
 
-    public void setDtCadastro(Date dtCadastro) {
+    public void setDtCadastro(LocalDate dtCadastro) {
         DtCadastro = dtCadastro;
     }
 
@@ -76,13 +95,16 @@ public class Pessoa {
     //</editor-fold>
 
     // <editor-fold desc="Métodos">
-    public boolean CpfEhValido(String cpf){
-        try {
-            return new ValidadorCpf().EhValido(cpf);
-        }catch (Exception except){
-            System.err.println(except.getMessage());
+        public void getPessoa(){
+            System.out.println(
+                    "Cpf: " + this.getCpf() +
+                    "\nNome: " + this.getNome() +
+                    "\nApelido: " + this.getApelido() +
+                    "\nEmail: " + this.getEmail() +
+                    "\nData de nascimento: " + this.getDtNascimento() +
+                    "\nData de cadastro: " + this.getDtCadastro() +
+                    "\nTipo de usuário: " + this.getTipoUsuario()
+            );
         }
-        return false;
-    }
     // </editor-fold>
 }
