@@ -1,0 +1,37 @@
+<form (ngSubmit)="cadastrar()" #formulario="ngForm">
+    <div class="card-cadastro">
+        <div class="card-cadastro-titulo">
+            <h1>CRIAR CONTA</h1>
+        </div>
+        <hr class="card-cadastro-div-separator">
+        <div class="card-cadastro-content">
+            <div class="card-cadastro-content-campo-nome">
+                <input type="text" placeholder="Nome" name="nome" [(ngModel)] = "pessoa.nome">
+                <input type="text" placeholder="Último nome" name="ultimoNome" [(ngModel)] = "pessoa.ultimoNome">
+            </div>
+            <div class="card-cadastro-content-campo-data">
+                <p class="card-cadastro-content-titulo-data-nascimento">Data de nascimento</p>
+                <input type="date" name="dtNascimento" [(ngModel)] = "pessoa.dtNascimento">
+            </div>
+            <div class="card-cadastro-content-campo-genero">
+                <p class="card-cadastro-content-titulo-select-genero">Gênero</p>
+                <select name="genero" id="" [(ngModel)] = "pessoa.genero">
+                    <option value="1">Masculino</option>
+                    <option value="2">Feminino</option>
+                    <option value="3">Outros</option>
+                </select>
+            </div>
+            <div class="card-cadastro-content-campo-email">
+                <input type="text" placeholder="Email" name="email" [(ngModel)] = "pessoa.email">
+            </div>
+            <div class="card-cadastro-content-campo-senha">
+                <input type="password" placeholder="Senha" name="senha" [(ngModel)] = "pessoa.senha">
+                <input type="password" placeholder="Confirmar senha" name="confirmarSenha">
+            </div>
+        </div>
+        <hr class="card-cadastro-div-separator">
+        <div class="card-cadastro-footer">
+            <button type="submit" class="card-cadastro-footer-envia-btn">ENVIAR</button>
+        </div>
+    </div>
+</form>

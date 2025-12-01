@@ -9,11 +9,13 @@ import java.util.Date;
 public class Pessoa {
     private String Cpf;
     private String Nome;
+    private String UltimoNome;
     private String Apelido = null;
     private String Email;
     private LocalDate DtNascimento;
     private LocalDate DtCadastro;
     private int TipoUsuario = 2;
+    private int Genero;
 
     public Pessoa(){
 
@@ -48,6 +50,22 @@ public class Pessoa {
             System.err.println(except.getMessage());
         }
 
+    }
+
+    public String getUltimoNome() {
+        return UltimoNome;
+    }
+
+    public void setUltimoNome(String ultimoNome) {
+        try {
+            if (ultimoNome.matches("^[a-zA-Z]+$")) {
+                UltimoNome = ultimoNome;
+            } else {
+                throw new Exception("Nome inválido");
+            }
+        } catch (Exception except) {
+            System.err.println(except.getMessage());
+        }
     }
 
     public String getApelido() {
@@ -91,6 +109,14 @@ public class Pessoa {
 
     public void setTipoUsuario(int tipoUsuario) {
         TipoUsuario = tipoUsuario;
+    }
+
+    public int getGenero() {
+        return Genero;
+    }
+
+    public void setGenero(int genero) {
+        Genero = genero;
     }
     //</editor-fold>
 
